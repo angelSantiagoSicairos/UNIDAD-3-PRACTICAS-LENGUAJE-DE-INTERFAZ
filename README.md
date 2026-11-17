@@ -1,6 +1,6 @@
-# UNIDAD 3 PRACTICAS LENGUAJE DE INTERFAZ# Lenguajes de Interfaz — Unidad 3 (Ensamblador x86)
+# Lenguajes de Interfaz — Unidad 3 (Ensamblador x86)
 
-Repositorio de prácticas y proyecto final correspondientes a la **Unidad 3** de la materia **Lenguajes de Interfaz**, desarrollados en lenguaje ensamblador de 32 bits (MASM) utilizando la biblioteca **Irvine32**.
+Repositorio oficial con las prácticas de la **Unidad 3** de la materia **Lenguajes de Interfaz**, desarrolladas en lenguaje ensamblador de 32 bits (MASM) utilizando la biblioteca **Irvine32**.
 
 ## Datos Generales
 * **Alumno:** Santiago Sicairos Angel Bulmaro
@@ -10,18 +10,28 @@ Repositorio de prácticas y proyecto final correspondientes a la **Unidad 3** de
 
 ---
 
-## Contenido del Repositorio
+## Índice de Prácticas (Enlaces Directos al Código Fuente)
 
-### Prácticas de la Unidad 3
-1. **[Práctica 01 - Procedimientos](./Practica01/Main.asm):** Definición, invocación (`CALL`) y retorno (`RET`) de subrutinas básicas.
-2. **[Práctica 02 - Procedimientos Almacenados](./Practica02/Main.asm):** Llamadas anidadas entre procedimientos y flujo de ejecución LIFO.
-3. **[Práctica 03 - Validación de Cadena No Vacía](./Practica03/Main.asm):** Evaluación de longitud en `ECX` mediante `TEST` y retorno de estado en `EAX`.
-4. **[Práctica 04 - Paso de Parámetros por Pila](./Practica04/Main.asm):** Manejo de marco de pila (`EBP`/`ESP`), preservación de registros y limpieza de argumentos con `RET 8`.
-5. **[Práctica 05 - Macros](./Practica05/Main.asm):** Definición y expansión de macros parametrizadas (`MostrarMensaje` y `Multiplicar`).
+1. **[Práctica 01 - Procedimientos](https://github.com/angelSantiagoSicairos/UNIDAD-3-PRACTICAS-LENGUAJE-DE-INTERFAZ/blob/master/01%20-%20Practica%20Procedimiento/01%20-%20Practica%20Procedimiento/Main.asm)**
+   * Definición, invocación (`CALL`) y retorno (`RET`) de un procedimiento personalizado en ensamblador x86 usando Irvine32.
+
+2. **[Práctica 02 - Procedimientos Almacenados](https://github.com/angelSantiagoSicairos/UNIDAD-3-PRACTICAS-LENGUAJE-DE-INTERFAZ/blob/master/02%20-%20Procedimientos%20Almacenados/02%20-%20Procedimientos%20Almacenados/Main.asm)**
+   * Llamadas anidadas entre subrutinas (`main -> rutinaA -> rutinaB`) y control del flujo de retorno LIFO.
+
+3. **[Práctica 03 - Validación de Cadena No Vacía](https://github.com/angelSantiagoSicairos/UNIDAD-3-PRACTICAS-LENGUAJE-DE-INTERFAZ/blob/master/03%20-%20Validaci%C3%B3n%20de%20Cadena%20No%20Vac%C3%ADa/03%20-%20Validaci%C3%B3n%20de%20Cadena%20No%20Vac%C3%ADa/Main.asm)**
+   * Evaluación de longitud en el registro `ECX` mediante la instrucción `TEST` y retorno del estado de validación en `EAX`.
+
+4. **[Práctica 04 - Paso de Parámetros por Pila](https://github.com/angelSantiagoSicairos/UNIDAD-3-PRACTICAS-LENGUAJE-DE-INTERFAZ/blob/master/04%20-%20Paso%20de%20Par%C3%A1metros%20por%20Pila/04%20-%20Paso%20de%20Par%C3%A1metros%20por%20Pila/Main.asm)**
+   * Paso de argumentos a través de la pila mediante marco base (`EBP`/`ESP`), preservación de registros y limpieza con `RET 8`.
+
+5. **[Práctica 05 - Macros](https://github.com/angelSantiagoSicairos/UNIDAD-3-PRACTICAS-LENGUAJE-DE-INTERFAZ/blob/master/05%20-%20Macros/05%20-%20Macros/Main.asm)**
+   * Definición, inclusión y expansión de macros parametrizadas (`MostrarMensaje` y `Multiplicar`).
+
+---
 
 ## Requisitos y Compilación
-1. **Entorno:** Microsoft Visual Studio (2019 / 2022) con la carga de trabajo *Desarrollo para el escritorio con C++*.
-2. **Arquitectura:** Configurar la plataforma de solución en **x86** (32 bits).
-3. **Dependencias:** Tener configurada la librería **Irvine32** (`C:\Irvine`), agregando su ruta en *Directorios de inclusión adicionales* y *Directorios de bibliotecas adicionales*, e incluyendo `Irvine32.lib` en *Dependencias adicionales* del enlazador.
-4. **Ensamblador:** Activar la personalización de compilación **masm** en el proyecto y verificar que cada archivo `.asm` tenga el tipo de elemento *Microsoft Macro Assembler*.
-5. **Ejecución:** Compilar con `Ctrl + Shift + B` y ejecutar con `Ctrl + F5`.
+* **Entorno:** Microsoft Visual Studio (2019 / 2022) con la carga de trabajo *Desarrollo para el escritorio con C++*.
+* **Arquitectura:** Plataforma de solución configurada estrictamente en **x86** (32 bits).
+* **Dependencias:** Librería **Irvine32** configurada en las propiedades del proyecto (`Irvine32.lib` y directorios de inclusión/bibliotecas).
+* **Ensamblador:** Personalización de compilación **masm** habilitada en el proyecto y archivos `.asm` configurados como *Microsoft Macro Assembler*.
+* **Ejecución:** Compilar con `Ctrl + Shift + B` y ejecutar con `Ctrl + F5`.
